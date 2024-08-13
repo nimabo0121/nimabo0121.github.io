@@ -14,13 +14,19 @@
     <link rel="stylesheet" href="/styles/nav.css" />
     <style>
       body {
-        background-color: #ffffff;
+        background-color: #ffffffa9;
         margin: 0;
         padding: 0;
+        border: 0;
         height: 100%;
       }
-
-      
+      .div-about {
+        height: 100vh;
+      }
+      .div-skill{
+        height: 100vh;
+        background-color: black;
+      }
     </style>
   </head>
   <body>
@@ -58,25 +64,25 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#div-about">
               <img class="nav-button" src="/path/textfont/關於-小.png" alt="" />
               <img class="button-img" src="/path/button.png" />
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#div-skill">
               <img class="nav-button" src="/path/textfont/技術-小.png" alt="" />
               <img class="button-img" src="/path/button.png" />
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#div-about">
               <img class="nav-button" src="/path/textfont/經歷-小.png" alt="" />
               <img class="button-img" src="/path/button.png" />
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#div-about">
               <img class="nav-button" src="/path/textfont/作品-小.png" alt="" />
               <img class="button-img" src="/path/button.png" />
             </a>
@@ -84,6 +90,14 @@
         </ul>
       </div>
     </nav>
+    <main>
+      <div class="div-about" id="div-about"></div>
+      <div class="div-skill" id="div-skill"></div>
+    </main>
+    <script>
+     
+    </script>
+    <script src="/nav.js"></script>
     <script src="/video.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
