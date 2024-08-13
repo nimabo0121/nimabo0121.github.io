@@ -1,0 +1,28 @@
+.divMp4 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content {
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 9999;
+    transition: opacity 1s ease-in-out;
+    top: 30%;
+    left: 20%;
+}
+.content.show {
+    display: block;
+    opacity: 1;
+}
+#content1 { top: 15%; left: 20%; }
+#content2 { top: 30%; left: 50%; }
+#content3 { top: 50%; left: 70%; }
+#content4 { top: 65%; left: 40%; }
+.content img { max-width: 100%; margin: 0px; }
