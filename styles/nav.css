@@ -4,7 +4,7 @@ nav{
     margin-top: -1px;
     padding: 0;
     border: 0;
-    z-index: 1000;
+    border-top: 1px solid white;
     /* background-image:url('/path/nav.png') ;  */
     background-size: cover; 
     background-position: center; 
