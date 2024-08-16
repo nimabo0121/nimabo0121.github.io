@@ -1,0 +1,38 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* 起始時透明度為 0 */
+      transform: translateY(20px); /* 起始時向下移動 20 像素 */
+    }
+    to {
+      opacity: 1; /* 結束時透明度為 1 */
+      transform: translateY(0); /* 結束時回到原來的位置 */
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1; /* 起始時透明度為 1 */
+      transform: translateY(0); /* 起始時在原來的位置 */
+    }
+    to {
+      opacity: 0; /* 結束時透明度為 0 */
+      transform: translateY(20px); /* 結束時向下移動 20 像素 */
+    }
+  }
+  
+  /* 初始狀態，元素不可見 */
+  .hide {
+    opacity: 0; /* 透明度為 0 */
+    transform: translateY(20px); /* 向下移動 20 像素 */
+  }
+  
+  /* 進入視窗時應用的動畫 */
+  .show {
+    animation: fadeIn 1s forwards; /* 使用 fadeIn 動畫，持續時間 1 秒 */
+  }
+  
+  /* 離開視窗時應用的動畫 */
+  .hide-out {
+    animation: fadeOut 1s forwards; /* 使用 fadeOut 動畫，持續時間 1 秒 */
+  }
+  

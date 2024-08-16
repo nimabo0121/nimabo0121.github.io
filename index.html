@@ -10,8 +10,12 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/styles/video.css" />
     <link rel="stylesheet" href="/styles/nav.css" />
+    <link rel="stylesheet" href="/styles/canvas.css" />
+    <link rel="stylesheet" href="/styles/table.css" />
+    <link rel="stylesheet" href="/styles/frames.css" />
     <style>
       body {
         margin: 0;
@@ -26,11 +30,16 @@
         background-repeat: no-repeat;
       }
       .div-about {
-        padding: 150px 0 100px 0;
+        box-shadow: inset 0 -25px 50px rgba(221, 221, 221, 0.8);
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 150px 0 0px 0;
         height: 100vh;
+        border: 0;
+        margin: 0;
       }
 
       .div-about h2,
+      .col h2,
       h5 {
         font-family: "Arial", sans-serif;
       }
@@ -57,8 +66,12 @@
       }
 
       .div-skill {
-        background-color: rgba(255, 255, 255, 0.5);
-        height: auto;
+        box-shadow: inset 0 25px 50px rgba(221, 221, 221, 0.8);
+        background-color: rgba(199, 199, 199, 0.5);
+        height: 100vh;
+        border: 0;
+        margin: 0;
+        padding-top: 150px;
       }
 
       .path-img {
@@ -70,7 +83,10 @@
           padding: 50px;
           height: auto;
         }
-
+        .div-skill {
+          background-color: rgba(255, 255, 255, 0.5);
+          height: auto;
+        }
         .card-text {
           font-size: 14px;
           padding: 10px;
@@ -104,7 +120,10 @@
         .card-text {
           font-size: 12px;
         }
-
+        .div-skill {
+          background-color: rgba(255, 255, 255, 0.5);
+          height: auto;
+        }
         .about-card {
           padding: 5px;
         }
@@ -246,11 +265,110 @@
           </div>
         </div>
       </div>
-      <div class="div-skill" id="div-skill"></div>
+      <div class="div-skill" id="div-skill">
+        <div class="container">
+          <div class="row">
+            <div class="col canvas card">
+              <canvas id="radarChart"></canvas>
+            </div>
+            <div class="col">
+              <!-- <h2 class="text-center">技術</h2> -->
+              <p class="text-black-50">
+                如左圖, 為我掌握的技術熟悉度, 學習中還有技術如jQuery、Figma等...
+              </p>
+              <p class="text-black-50">
+                資料庫負責設計, 會員資料相關、購物車訂單、訂單狀態 為主,
+              </p>
+              <p class="text-black-50">
+                在期中專題負責會員系統, 主要使用技術為, PHP、MySQL、JavaScript,
+              </p>
+              <p class="text-black-50">
+                期末專題中將PHP轉為 React、Node.js 實現前後端分離,
+              </p>
+              <p class="text-black-50">
+                主要使用技術為 MySQL、JavaScript、CSS/SCSS、React、Node.js,
+              </p>
+              <p class="text-black-50">
+                後期側重於學習React、Node.js, 並使程式碼元件化, 實施可重複利用
+              </p>
+              <div class="table-card">
+                <table class="table-borderless">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="">完成項目</th>
+                      <th scope="col">期中專題</th>
+                      <th scope="col">期末專題</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">會員系統</th>
+                      <td>會員/管理者-登入/出</td>
+                      <td>會員-登入/出</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td>會員VIP等級</td>
+                      <td>會員VIP等級</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td>後端-黑名單系統</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">會員資料</th>
+                      <td>資料編輯</td>
+                      <td>編輯/修改密碼</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">第三方服務</th>
+                      <td></td>
+                      <td>密碼找回-OPT驗證</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <!-- <td colspan="2"></td> -->
+                      <td></td>
+                      <td>google/line - login</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">購物車系統</th>
+                      <td>後端API/SQL設計</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">訂單相關</th>
+                      <td>目前/歷史/後端刪除</td>
+                      <td>目前/歷史</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td>訂單狀態更改</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">額外功能</th>
+                      <td></td>
+                      <td>Home鍵設計</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
+    <script>
+    
+    </script>
+    <script src="/frames.js"></script>
+    <script src="/canvas.js"></script>
     <script src="/nav.js"></script>
     <script src="/video.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
