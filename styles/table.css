@@ -1,36 +1,76 @@
 .table-borderless {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .table-borderless th,
 .table-borderless td {
-    border: none;
-    padding: 8px 12px;
-    text-align: left;
+  border: none;
+  padding: 8px 12px;
+  text-align: left;
 }
 
 .table-borderless th {
-    color: #343a40;
+  color: #343a40;
 }
 
 .table-borderless th:hover {
-    color: #e9ecef; 
-    transition: color 0.5s ease;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.6);
+  color: #e9ecef;
+  transition: color 0.5s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.1),
+    0px 0px 8px rgba(0, 0, 0, 0.6);
 }
 .table-borderless td:hover {
-    color: #e9ecef; 
-    transition: color 0.5s ease;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.6);
+  color: #e9ecef;
+  transition: color 0.5s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.1),
+    0px 0px 8px rgba(0, 0, 0, 0.6);
 }
 .table-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(82, 82, 82, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .div-skill .container {
+    padding: 15px; /* 增加內邊距以適應小螢幕 */
+  }
+
+  .div-skill .row {
+    flex-direction: column; /* 在較小螢幕上，將列排列為縱向 */
+  }
+
+  .div-skill .col {
+    margin-bottom: 20px; /* 每個列間距 */
+  }
+
+  .div-skill .canvas {
+    /* 確保 canvas 在小螢幕上充滿寬度 */
     width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(82, 82, 82, 0.4);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  }
+
+  .div-skill .table-card {
+    overflow-x: auto; /* 允許橫向滾動表格 */
+  }
+
+  .div-skill table {
+    width: 100%; /* 確保表格寬度適應容器 */
+    border-collapse: collapse; /* 合併邊框 */
+  }
+}
+
+@media (max-width: 576px) {
+  .div-skill .text-black-50 {
+    font-size: 14px; /* 調整字體大小 */
+    line-height: 1.5; /* 增加行高以提高可讀性 */
+  }
+
+  .div-skill .canvas {
+    height: 200px; /* 調整 canvas 高度 */
+  }
 }
