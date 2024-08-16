@@ -14,18 +14,104 @@
     <link rel="stylesheet" href="/styles/nav.css" />
     <style>
       body {
-        background-color: #ffffffa9;
         margin: 0;
         padding: 0;
         border: 0;
         height: 100%;
       }
-      .div-about {
-        height: 110vh;
+      main {
+        background-image: url(/path/about背景/2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
-      .div-skill{
+      .div-about {
+        padding: 150px 0 100px 0;
         height: 100vh;
-        background-color: black;
+      }
+
+      .div-about h2,
+      h5 {
+        font-family: "Arial", sans-serif;
+      }
+
+      p {
+        font-weight: bold;
+      }
+
+      .card-text {
+        background-color: rgba(63, 63, 63, 0.8);
+        border: 0;
+        color: #ddd;
+      }
+
+      .card-text:hover {
+        transition: background-color 0.5s ease;
+        background-color: #585858;
+      }
+
+      .about-card {
+        background-color: rgba(24, 24, 24, 0.5);
+        border: 0;
+        color: #ddd;
+      }
+
+      .div-skill {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: auto;
+      }
+
+      .path-img {
+        box-shadow: 8px 8px 8px rgba(61, 61, 61, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        .div-about {
+          padding: 50px;
+          height: auto;
+        }
+
+        .card-text {
+          font-size: 14px;
+          padding: 10px;
+        }
+
+        .about-card {
+          margin: 0;
+          padding: 10px;
+        }
+
+        .navbar-nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .navbar-toggler {
+          margin-right: 10px;
+        }
+
+        .content img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .card {
+          margin-bottom: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .card-text {
+          font-size: 12px;
+        }
+
+        .about-card {
+          padding: 5px;
+        }
+
+        .navbar-nav {
+          text-align: center;
+        }
       }
     </style>
   </head>
@@ -49,59 +135,120 @@
         <img src="/path/textfont/歷.png" alt="歷" />
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg">
-        
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="#div-about">
-              <img class="nav-button" src="/path/textfont/關於-小.png" alt="" />
-              <img class="button-img" src="/path/button.png" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#div-skill">
-              <img class="nav-button" src="/path/textfont/技術-小.png" alt="" />
-              <img class="button-img" src="/path/button.png" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#div-about">
-              <img class="nav-button" src="/path/textfont/經歷-小.png" alt="" />
-              <img class="button-img" src="/path/button.png" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#div-about">
-              <img class="nav-button" src="/path/textfont/作品-小.png" alt="" />
-              <img class="button-img" src="/path/button.png" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="#div-about">
+                <img
+                  class="nav-button"
+                  src="/path/textfont/關於-小.png"
+                  alt="關於我"
+                />
+                <img class="button-img" src="/path/button.png" alt="" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#div-skill">
+                <img
+                  class="nav-button"
+                  src="/path/textfont/技術-小.png"
+                  alt="技術"
+                />
+                <img class="button-img" src="/path/button.png" alt="" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#div-experience">
+                <img
+                  class="nav-button"
+                  src="/path/textfont/經歷-小.png"
+                  alt="經歷"
+                />
+                <img class="button-img" src="/path/button.png" alt="" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#div-works">
+                <img
+                  class="nav-button"
+                  src="/path/textfont/作品-小.png"
+                  alt="作品"
+                />
+                <img class="button-img" src="/path/button.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div class="div-about" id="div-about">
-        <div class="card"></div>
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 card about-card px-4">
+              <h2 class="text-center pt-5">關於我</h2>
+              <h4 id="about-text1" class="pt-3">Hi! 我是育菘</h4>
+              <p>
+                我具有電子工程系相關學習經歷, 在科技業內曾擔任設備/製程工程師,
+              </p>
+              <p>
+                任職期間內接觸到程式相關技術,
+                後自學及參與iSpan資展國際前端工程師養成培訓,
+              </p>
+              <p>
+                現階段目標為踏入前端工程師,
+                將所學技能活用並且在軟體工程師的領域繼續精進!!
+              </p>
+              <div class="row pt-5 mx-2 justify-content-center">
+                <div
+                  class="col-12 col-sm-6 col-md-5 card text-center card-text mx-2 mb-4"
+                >
+                  <p class="pt-4">
+                    建國科技大學
+                    <br />
+                    電子工程系
+                    <br />
+                    2017 - 2021
+                  </p>
+                </div>
+                <div
+                  class="col-12 col-sm-6 col-md-5 card text-center card-text mx-2 mb-4"
+                >
+                  <p class="pt-4">
+                    iSpan 資展國際<br />
+                    前端工程師就業養成班<br />
+                    2024/03 - 2024/08<br />
+                    (受訓時數588 hr)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="carousel-inner path-img">
+                <img
+                  src="/path/個人照/DAEA2216-D3E7-4CE6-B658-F91AD1129AC0.jpg"
+                  class="d-block w-100"
+                  alt="個人照"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="div-skill" id="div-skill"></div>
     </main>
     <footer></footer>
-    <script>
-     
-    </script>
     <script src="/nav.js"></script>
     <script src="/video.js"></script>
     <script
