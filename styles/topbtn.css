@@ -26,4 +26,12 @@
       /* padding: 8px; */
     }
   }
+  @media (max-width: 375px) {
+    .top-btn {
+      right: 10px;
+      bottom: 10px;
+      font-size: 20px;
+      /* padding: 8px; */
+    }
+  }
   
