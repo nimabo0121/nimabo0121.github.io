@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, options);
 
     // 觀察需要動畫的每個元素
-    const elements = document.querySelectorAll("p, .card, table, .path-img");
+    const elements = document.querySelectorAll("p, .card, table, .path-img, li, h5, h2");
     elements.forEach((element) => {
       // 確保卡片和表格在初始狀態下有 'hide' 類別
       element.classList.add("hide");
