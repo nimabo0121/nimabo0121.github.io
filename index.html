@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/table.css" />
     <link rel="stylesheet" href="/styles/frames.css" />
     <link rel="stylesheet" href="/styles/work.css" />
+    <link rel="stylesheet" href="/styles/topbtn.css" />
     <style>
       body {
         margin: 0;
@@ -101,7 +102,19 @@
       .path-img {
         box-shadow: 8px 8px 8px rgba(61, 61, 61, 0.5);
       }
-      
+      .git-btn {
+        position: fixed;
+        bottom: 90px;
+        right: 30px;
+        height: 50px;
+        width: 50px;
+        font-size: 24px;
+      }
+      .git-btn:hover {
+        bottom: 95px;
+        font-size: 26px;
+        transition: font-size 0.3s ease, bottom 0.3s ease
+      }
       @media (max-width: 768px) {
         .div-about {
           padding: 50px;
@@ -495,6 +508,12 @@
         </div>
       </div>
     </main>
+    <a href="https://github.com/nimabo0121" class="git-btn">
+      <i class="fa-brands fa-github fa-2xl" style="color: #000000"></i>
+    </a>
+    <button class="top-btn" id="topBtn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <footer>
       <h2 class="pt-3 text-center">聯絡我</h2>
       <div class="text-center">
@@ -508,9 +527,8 @@
         </a>
       </div>
     </footer>
-    <script>
-      
-    </script>
+    <script></script>
+    <script src="/topbtn.js"></script>
     <script src="/work.js"></script>
     <script src="/frames.js"></script>
     <script src="/canvas.js"></script>

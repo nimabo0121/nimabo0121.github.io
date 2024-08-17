@@ -1,0 +1,29 @@
+.top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    /* padding: 10px; */
+    display: none; 
+  }
+  
+  .top-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  @media (max-width: 768px) {
+    .top-btn {
+      right: 10px;
+      bottom: 10px;
+      font-size: 20px;
+      /* padding: 8px; */
+    }
+  }
+  
